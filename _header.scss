@@ -1,0 +1,23 @@
+@import './variables';
+ @mixin flexCenter( $direction, $background) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background;
+     
+ }
+header{
+    @include flexCenter( column, green );
+
+    background: lightblue;
+    height: 100vh;
+
+    color: $textColor;
+    button{
+        background: brown;
+        &::after{
+           content: "Heyooo";  
+        }    
+    }           
+}
